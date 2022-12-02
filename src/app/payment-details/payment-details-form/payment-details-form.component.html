@@ -1,0 +1,55 @@
+<form [formGroup]="service.registerForm" autocomplete="off" novalidate (ngSubmit)="onSubmit()">
+    <div class="mb-3">
+        <label for="cardOwnerName" class="form-label">CARD OWNER NAME</label>
+        <input type="text"
+            class="form-control form-control-lg my-shadow" 
+            placeholder="Full Name" 
+            id="cardOwnerName"
+            formControlName="cardOwnerName"
+            required
+            [class.is-invalid]="CardOwnerName.touched && CardOwnerName.invalid"
+            [class.is-valid]="CardOwnerName.touched && CardOwnerName.valid"
+            >
+    </div>
+    <div class="mb-3">
+        <label for="cardNumber" class="form-label">CARD NUMBER</label>
+        <input type="text"
+            class="form-control form-control-lg my-shadow" 
+            placeholder="16 Digit Card Number" 
+            id="cardNumber"
+            formControlName="cardNumber"
+            required maxlength="16" minlength="16"
+            [class.is-invalid]="CardNumber.touched && CardNumber.invalid"
+            [class.is-valid]="CardNumber.touched && CardNumber.valid"
+            >
+    </div>
+    <div class="row">
+        <div class="col-md-6 mb-3">
+            <label for="expirationDate" class="form-label">DATE</label>
+            <input type="text"
+                class="form-control form-control-lg my-shadow" 
+                placeholder="MM/YY" 
+                id="expirationDate"
+                formControlName="expirationDate"
+                required maxlength="5" minlength="5"
+                [class.is-invalid]="ExpirationDate.touched && ExpirationDate.invalid"
+                [class.is-valid]="ExpirationDate.touched && ExpirationDate.valid"
+                >
+        </div>
+        <div class="col-md-6 mb-3">
+            <label for="securityCode" class="form-label">SECURITY CODE</label>
+            <input type="text"
+                class="form-control form-control-lg my-shadow" 
+                placeholder="Security Code" 
+                id="securityCode"
+                formControlName="securityCode"
+                required maxlength="3" minlength="3"
+                [class.is-invalid]="SecurityCode.touched && SecurityCode.invalid"
+                [class.is-valid]="SecurityCode.touched && SecurityCode.valid"
+                >
+        </div>
+    </div>  
+    <div class="d-grid gap-2 mb-3">
+        <button class="btn btn-info" type="submit" [disabled]="service.registerForm.invalid">SUBMIT</button>
+    </div>      
+</form>

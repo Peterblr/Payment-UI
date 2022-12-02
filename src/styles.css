@@ -1,0 +1,60 @@
+.my-shadow {
+    box-shadow: 0px 0px 0.75rem rgba(7, 41, 233, 0.3);
+}
+
+.my-shadow:hover {
+    box-shadow: 0px 0px 1.5rem rgba(7, 233, 128, 0.452); 
+}
+
+.btn:hover {
+    box-shadow: 0px 0px 1.5rem rgba(7, 233, 128, 0.452); 
+}
+
+input.is-invalid {
+    box-shadow: 0px 0px 0.75rem rgba(233, 22, 7, 0.781);
+}
+
+input.is-valid {
+    box-shadow: 0px 0px 0.5rem rgba(7, 233, 128, 0.452); 
+}
+
+.my-shadow-table:hover {
+    box-shadow: 0px 0px 1.5rem rgba(7, 233, 128, 0.452); 
+}
+
+/* pagination */
+.ngx-pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;   
+}
+
+.ngx-pagination li {
+    width: 35px;
+    height: 35px;
+    border-radius: 50% !important;
+    display: flex !important;
+    justify-content: center;
+    align-items: center;   
+    box-shadow: 0px 0px 0.75rem rgba(7, 41, 233, 0.3);
+}
+
+.ngx-pagination li:hover {
+    box-shadow: 0px 0px 0.5rem rgba(7, 233, 128, 0.658); 
+}
+
+.ngx-pagination .small-screen {
+    display: none !important; 
+}
+
+.ngx-pagination a {
+    width: 35px;
+    height: 35px;
+    border-radius: 50% !important;
+}
+
+.ngx-pagination a:hover {
+    background-color: white !important;
+}
+
